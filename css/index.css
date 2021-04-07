@@ -1,0 +1,448 @@
+/* 首页样式 */
+
+/* 首页 1.0 焦点 */
+.focus {
+  position: relative;
+  height: 500px;
+  background-color: #f5f5f5;
+}
+.focus-in {
+  position: relative;
+  display: flex;
+  height: 500px;
+}
+.focus-aside {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 251px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0.8;
+}
+.focus-aside a {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 16px;
+  color: #fff;
+}
+.focus-aside a:hover {
+  background-color: #5eb69c;
+}
+.focus-aside a h4 {
+  font-weight: normal;
+  margin-left: 35px;
+  margin-right: 15px;
+}
+.focus-aside a p {
+  flex: 1;
+}
+.icon-right {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-position: -37px -110px;
+  margin-left: 10px;
+  margin-right: 19px;
+}
+/* 左+右滑动控制条 */
+.slider_control_left,
+.slider_control_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.2s;
+}
+.focus-in:hover .slider_control_left,
+.focus-in:hover .slider_control_right {
+  opacity: 1;
+}
+.slider_control_left {
+  top: 260px;
+  left: 268px;
+}
+.slider_control_right {
+  top: 260px;
+  right: 8px;
+}
+.slider_control_left i,
+.slider_control_right i {
+  width: 21px;
+  height: 23px;
+}
+.slider_control_left i {
+  background-position: 0 -70px;
+}
+.slider_control_right i {
+  background-position: -31px -70px;
+}
+/* 首页 1.5 指示栏  */
+.indicator {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 445px;
+  bottom: 30px;
+  width: 110px;
+  height: 10px;
+}
+.indicator span {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+.indicator span:nth-child(2) {
+  background-color: #fff;
+}
+.indicator span:hover {
+  background-color: #fff;
+}
+/* 首页 2.1 新鲜好物 头部  */
+.good-head {
+  display: flex;
+  align-items: center;
+  height: 114px;
+}
+.good-head h3 {
+  margin-right: 34px;
+  font-size: 29px;
+  color: #333;
+}
+.good-head p {
+  flex: 1;
+}
+.good-head a,
+.fresh-head span a {
+  display: flex;
+  align-items: center;
+}
+.icon-right-gray {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background-position: 0px -108px;
+  margin-left: 10px;
+}
+/* 首页 2.2 新鲜好物 主体 */
+.good-body {
+  display: flex;
+  justify-content: space-between;
+  height: 404px;
+}
+
+.good-body > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 305px;
+  background: #f0f9f4;
+  transition: 0.3s linear;
+}
+.good-body > a:hover {
+  transform: translate(0, -3px);
+  box-shadow: rgb(144 144 144 / 25%) 4px 4px 8px 1px;
+}
+.good-body a img {
+  width: 100%;
+}
+.good-body a p {
+  line-height: 40px;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #333;
+}
+.good-body a span {
+  font-size: 23px;
+  color: #9a2e1f;
+}
+/* 首页 3.0 人气推荐 */
+.recom-body a {
+  background-color: #fff;
+}
+.recom-body a span {
+  font-size: 16px;
+  color: #999;
+}
+/* 首页 4.0 热门品牌 */
+.brand {
+  background-color: #f5f5f5;
+  padding-bottom: 70px;
+}
+/* 首页 4.1 热门品牌头部 */
+/* 首页4.1.3 左右切换按钮 */
+.switch-left,
+.switch-right {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background-color: #ccc;
+  text-align: center;
+  margin-left: 12px;
+}
+.switch-right {
+  background-color: #5eb69c;
+}
+.switch-left:hover,
+.switch-right:hover {
+  background-color: #5eb69c;
+}
+.switch-left i,
+.switch-right i {
+  display: inline-block;
+  width: 8px;
+  height: 11px;
+  background-position: -79px -109px;
+}
+.switch-left i {
+  transform: rotateZ(180deg);
+}
+/* 首页 4.2 热门品牌主体 */
+.brand-body {
+  display: flex;
+  justify-content: space-between;
+  height: 306px;
+}
+.brand-body a {
+  width: 240px;
+  transition: 0.3s;
+}
+.brand-body a:hover {
+  transform: translate(0, -3px);
+  box-shadow: rgb(0 0 0 / 23%) 2px 3px 5px 2px;
+}
+.brand-body a img {
+  width: 100%;
+}
+
+/* 首页 5.0 生鲜 */
+.fresh-head {
+  display: flex;
+  align-items: center;
+  height: 95px;
+}
+.fresh-head h3 {
+  flex: 1;
+  font-size: 29px;
+  color: #333;
+}
+.fresh-head a {
+  height: 22px;
+  padding: 0 8px;
+  margin: 0 7px;
+}
+.fresh-head > a:nth-of-type(1) {
+  background-color: #5eb69c;
+  color: #fff;
+}
+.fresh-head > a:hover {
+  background-color: #5eb69c;
+  color: #fff;
+}
+.fresh-head span {
+  margin-left: 65px;
+}
+.fresh-body {
+  display: flex;
+  height: 611px;
+}
+.fresh-left {
+  position: relative;
+  width: 239px;
+  transition: 0.3s;
+}
+.fresh-left:hover {
+  box-shadow: rgb(0 0 0 / 23%) 5px 3px 5px 2px;
+  transform: translate(0, -3px);
+}
+.fresh-left img {
+  width: 100%;
+  height: 100%;
+}
+
+.fresh-left .label {
+  position: absolute;
+  left: 0;
+  bottom: 198px;
+  display: flex;
+  height: 67px;
+  color: #fff;
+}
+.fresh-left .label p,
+.fresh-left .label span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+.fresh-left .label p {
+  width: 76px;
+}
+.fresh-left .label span {
+  width: 114px;
+  opacity: 0.8;
+}
+.fresh-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex: 1;
+}
+.fresh-right > div {
+  position: relative;
+  width: 240px;
+  height: 304px;
+  border: 2px solid transparent;
+  padding: 3px 15px 0;
+  overflow: hidden;
+  transition: 0.2s linear;
+}
+.fresh-right > div:hover {
+  border-color: #5eb69c;
+}
+.fresh-right div img {
+  width: 100%;
+}
+.fresh-right div .price {
+  font-weight: bold;
+  color: #9a2e1f;
+}
+.similar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: -84px;
+  left: 0;
+  width: 236px;
+  height: 84px;
+  background-color: #5eb69c;
+  transition: 0.2s linear;
+}
+.similar p {
+  padding: 18px 34px 7px;
+  border-bottom: 1px solid #a9dbcc;
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #fff;
+}
+.similar a {
+  font-size: 12px;
+  color: #fff;
+}
+.fresh-right div:hover .similar {
+  bottom: 0;
+}
+
+/* 首页 9.0 最新专题 */
+.topics {
+  background-color: #f5f5f5;
+  padding-bottom: 53px;
+}
+/* 首页 9.1 最新专题 主体 */
+.topics-body {
+  display: flex;
+  justify-content: space-between;
+  height: 356px;
+}
+.topics-body-item {
+  display: flex;
+  flex-direction: column;
+  width: 405px;
+  background-color: #ffffff;
+  transition: 0.3s linear;
+}
+.topics-body-item:hover {
+  transform: translate(0, -3px);
+  box-shadow: 4px 5px 5px 3px rgb(0 0 0 / 25%);
+}
+.topics-body-item a {
+  position: relative;
+  height: 288px;
+}
+.topics-body-item img {
+  width: 100%;
+  background-image: linear-gradient(0deg, #f78, #78f);
+}
+.topics-body-item a .about {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 16px 10px;
+}
+.topics-body-item a .about .intro {
+  flex: 1;
+  line-height: 32px;
+  color: #999;
+}
+.topics-body-item a .about .intro p:nth-child(1) {
+  font-size: 20px;
+  color: #fff;
+}
+.topics-body-item a .about .price {
+  width: 80px;
+  line-height: 26px;
+  background-color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  color: #9a2e1f;
+}
+.topics-body-item a .shield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 288px;
+  background-image: linear-gradient(
+    to top, 
+    rgba(0, 0, 0, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  opacity: 0;
+  transition: 0.3s linear;
+}
+.topics-body-item:hover a .shield {
+  opacity: 0.5;
+}
+
+.preview-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0 15px;
+}
+.preview-info span {
+  display: flex;
+  align-items: center;
+}
+.preview-info span i {
+  width: 16px;
+  height: 15px;
+}
+.topics-body-item .previeW {
+  flex: 1;
+  margin-left: 20px;
+}
+.follow-icon {
+  background-position: -120px -109px;
+}
+.follow-icon-02 {
+  background-position: -240px -109px;
+}
+.preview-icon {
+  background-position: -159px -109px;
+}
+.comment-icon {
+  background-position: -200px -109px;
+}

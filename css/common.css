@@ -1,0 +1,289 @@
+/* 主要放网站的公公样式-网站头部和网站的底部 */
+
+/* 版心 */
+.w {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+/* 精灵图封装 */
+.spirit {
+  background: url(../images/sprites.png) no-repeat;
+  background-size: 400px;
+}
+
+/* 1.0 顶部快捷导航 */
+.shortcut {
+  height: 52px;
+  background-color: #333;
+}
+/* 使超出快捷导航部分也有颜色 */
+.shortcut .w {
+  background-color: #333;
+}
+.shortcut-right {
+  /* 开启flex布局 */
+  display: flex;
+  /* w没有高度，不能写height：100% */
+  height: 52px;
+  /* 主轴（水平）方向靠右对齐 */
+  justify-content: flex-end;
+  /* 侧轴（垂直）方向居中对齐 */
+  align-items: center;
+  font-size: 14px;
+}
+.shortcut-right a {
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+.shortcut-right a:hover {
+  color: #5eb69c;
+}
+.shortcut-right span {
+  margin: 0 16px;
+}
+.icon-phone {
+  width: 13px;
+  height: 18px;
+  background: url(../images/sprites.png);
+  /* background-size: 宽度 高度; 可以改变背景图大小 */
+  /*注意:auto 自适应高度 */
+  background-size: 400px auto;
+  background-position: -159px -69px;
+  margin-right: 4px;
+}
+/* 2.0 公共头部 */
+.header {
+  height: 132px;
+  background-color: #fff;
+}
+.header .w {
+  display: flex;
+  align-items: center;
+  height: 132px;
+}
+.logo {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+}
+.logo a {
+  width: 250px;
+  height: 100%;
+  background: url(../images/logo.png) no-repeat;
+  background-color: #fff;
+  background-size: 250px;
+}
+.nav {
+  display: flex;
+  flex: 1;
+}
+.nav a {
+  border: 2px solid transparent;
+  margin: 0 23px;
+  padding: 6px 0;
+}
+.nav a:hover {
+  border-bottom: 2px solid #60b89c;
+}
+.search {
+  position: relative;
+  width: 170px;
+}
+.search input {
+  width: 170px;
+  height: 40px;
+  border-bottom: 2px solid #e7e7e7;
+  padding-left: 32px;
+}
+.search-icon {
+  position: absolute;
+  top: 12px;
+  left: 6px;
+  width: 22px;
+  height: 20px;
+
+  background-position: -78px -69px;
+}
+.shopcar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 54px;
+}
+.icon-cart {
+  width: 26px;
+  height: 25px;
+  background-size: 400px;
+  background-position: -117px -68px;
+}
+.shopcar .count {
+  position: absolute;
+  top: 5px;
+  left: 26px;
+  background-color: #e26237;
+  border-radius: 8px;
+  padding: 0 8px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  opacity: 0.8;
+}
+/* 公共 3.0 底部服务  */
+.service {
+  height: 292px;
+  background-color: #fff;
+  border-top: 2px solid #e4e4e4;
+}
+.service .w {
+  display: flex;
+  height: 292px;
+  padding: 60px 0 40px 0;
+}
+.service .service-item:nth-child(1) {
+  border-left: 0;
+}
+.service-item {
+  flex: 1;
+  border-left: 1px solid #ddd;
+}
+.service-item h3 {
+  height: 52px;
+  font-weight: normal;
+  color: #999;
+  text-align: center;
+}
+.service-body {
+  display: flex;
+  justify-content: center;
+  height: 92px;
+}
+.service-body a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 92px;
+  height: 92px;
+  border: 1px solid #f4f4f4;
+  margin: 0 6px;
+}
+
+.icon-kefu {
+  width: 36px;
+  height: 29px;
+  background-position: -249px -69px;
+}
+.service-body :nth-child(1):hover .icon-kefu {
+  background-position: -205px -68px;
+}
+.icon-wenti {
+  width: 34px;
+  height: 31px;
+  background-position: -348px -68px;
+}
+.service-body :nth-child(2):hover .icon-wenti {
+  background-position: -298px -69px;
+}
+
+.icon-weixin {
+  width: 38px;
+  height: 32px;
+  background-position: -249px -13px;
+}
+.service-body :nth-child(1):hover .icon-weixin {
+  background-position: -205px -13px;
+}
+.icon-weibo {
+  width: 38px;
+  height: 32px;
+  background-position: -350px -13px;
+}
+.service-body :nth-child(2):hover .icon-weibo {
+  background-position: -300px -13px;
+}
+
+.service-erweima {
+  width: 116px;
+  height: 116px;
+  border: 1px solid #f3f3f3;
+  padding: 12px;
+  margin-right: 23px;
+}
+.service-erweima img {
+  width: 100%;
+}
+.service-xiazai p {
+  margin-bottom: 18px;
+}
+.service-xiazai a {
+  width: 102px;
+  height: 32px;
+  background-color: #5eb69c;
+  font-size: 14px;
+  color: #fff;
+}
+.service-hot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 32px;
+}
+.service-tel {
+  font-size: 22px;
+}
+.service-time {
+  font-size: 15px;
+  color: #999;
+}
+/* 公共 4.0 底部版权 */
+.copyright {
+  height: 344px;
+  background-color: #333;
+}
+.copyright .w {
+  background-color: #333;
+}
+.copyright-head {
+  display: flex;
+  height: 174px;
+  border-bottom: 1px solid #434343;
+}
+.copyright-head-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.copyright-head-item .spirit {
+  width: 59px;
+  height: 58px;
+}
+.copyright-head-item p {
+  font-size: 28px;
+  color: #fff;
+  margin-left: 19px;
+}
+.icon-jiage {
+  background-position: -1px -1px;
+}
+.icon-wuliu {
+  background-position: -65px -1px;
+}
+.icon-dianzan {
+  background-position: -130px -1px;
+}
+.copyright-body {
+  margin-top: 30px;
+  line-height: 34px;
+  text-align: center;
+}
+.copyright-body span {
+  margin: 0 12px;
+}
